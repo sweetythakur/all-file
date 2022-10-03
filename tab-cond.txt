@@ -1,0 +1,8 @@
+{% unless tabname == 'Product Details'%}
+                {{ block.settings.page.content }}
+                  {{ block.settings.content }}
+{%else  %}
+                   {{ product.metafields.custom.product_details }}
+                   {{ product.metafields.custom.chain }}
+                    
+{% endunless %}
