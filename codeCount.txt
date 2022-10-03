@@ -1,0 +1,7 @@
+ {%- paginate collection.products by section.settings.products_per_page -%}
+           <h2 class="product-count__textt text-body">
+   <sapn>showing</sapn> &nbsp <span class="count">  {{ paginate.current_offset | plus: 1 }}-
+   {% if paginate.next %}{{ paginate.current_offset | plus: paginate.page_size }}{% else %}
+   {{ paginate.items }}{% endif %} Of  {{ paginate.items }}results</span>
+    </h2>
+{% endpaginate %}
