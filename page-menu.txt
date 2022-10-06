@@ -1,0 +1,21 @@
+<div class="grid__item  first-col-contac1">
+<ul>
+
+{%- for link in section.settings.menu.links -%}
+  
+<a href="{{link.url}}"{% if request.path contains link.url %} class="active"{% endif %}>
+  
+        <li>{{ link.title }}</li> 
+</a>
+   
+    {%- endfor -%}
+    
+ 
+</ul> 
+  </div>
+  
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "t:sections.header.settings.menu.label"
+    },
